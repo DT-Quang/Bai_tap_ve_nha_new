@@ -1,6 +1,5 @@
 package Buoi2;
 
-import LessonContent.Switch_Case;
 
 import java.util.Scanner;
 

@@ -61,7 +61,7 @@ public class Company {
             System.out.println("----------");
         }
         System.out.println();
-        int tongLuongToanCTy =0;
+        double tongLuongToanCTy =0;
         for (Employee emp : danhSachNhanVien) {
             tongLuongToanCTy+= emp.cachTinhLuongThang();
         }
