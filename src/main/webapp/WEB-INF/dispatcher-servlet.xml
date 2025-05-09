@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation= "http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+                            http://www.springframework.org/schema/context
+                            https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!-- context:component-scan cho spring biết cần quét folder package nào  tạo bean -->
+<!--tìm tat ca cac class có annotation(@Controller , @Component, @Servlet , @Service , @Repository  tạo bean cho tat ca cac class đó-->
+<!--    cấu hình component-scan de spring tìm kiếm các controller, -->
+    <context:component-scan base-package="vn.com.t3h.controller"/>
+
+    <!-- Cấu hình view resolver để hiển thị JSP
+    để chỉ định cho spring (InternalResourceViewResolver) bết các file view đuược dat tại folder nào
+    de khi trả ra ten file (InternalResourceViewResolver) sẽ tự động tìm kiếm các file đó trong folder dc chi dinh
+   -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+<!--        config đường dẫn file sẽ bắt dau bằng -->
+        <property name="prefix" value="/WEB-INF/views/"/>
+<!--         config đường dẫn file view sẽ kết thúc bằng -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+</beans>
